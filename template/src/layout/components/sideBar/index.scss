@@ -1,0 +1,69 @@
+.side-bar {
+  height: 100%;
+  .el-menu {
+    border: none;
+  }
+  .is-opened {
+    .el-menu--inline {
+      background: $menuItem-bg !important;
+      &:hover {
+        background-color: $menuItem-hover !important;
+      }
+    }
+    .el-submenu__title {
+      background: $menuItem-bg !important;
+      &:hover {
+        background-color: $menuItem-hover !important;
+      }
+    }
+    .el-menu-item {
+      background: $menuItem-bg !important;
+      &:hover {
+        background-color: $menuItem-hover !important;
+      }
+    }
+  }
+  .menu-item-link {
+    .el-menu-item {
+      position: relative;
+      padding-left: 60px !important;
+      @include ellipsis(1);
+      &:before {
+        content: '';
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        border: 1px solid $submenu-title;
+        position: absolute;
+        left: 45px;
+        top: 23px;
+      }
+      &.is-active {
+        &:before {
+          content: '';
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          border: none;
+          background: $theme;
+          position: absolute;
+          left: 45px;
+          top: 23px;
+        }
+      }
+    }
+  }
+  .el-menu--collapse {
+    .el-menu-item span,
+    .el-submenu .el-submenu__title span {
+      height: 0;
+      width: 0;
+      overflow: hidden;
+      visibility: hidden;
+      display: inline-block;
+    }
+    .is-active > .el-submenu__title > i {
+      color: $theme !important;
+    }
+  }
+}

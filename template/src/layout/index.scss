@@ -1,0 +1,30 @@
+@mixin sidebar-transition {
+  transition: all 0.3s linear;
+}
+
+.home-page {
+  height: 100%;
+}
+.home-aside {
+  height: 100%;
+  background-color: $sidebar-background;
+  @include sidebar-transition();
+}
+.home-header {
+  padding-left: 20px;
+  background: #eef4f9;
+  @include flex(row, null, center);
+  .iconmenufold {
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 20px;
+    cursor: pointer;
+    @include sidebar-transition();
+    &:hover {
+      color: $theme;
+    }
+    &.icon-rotate {
+      transform: rotate(180deg);
+    }
+  }
+}
