@@ -1,6 +1,6 @@
 {
   "name": "@vow-cli/vue3-admin-template",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
